@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 
+import com.example.demo.model.MyModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,11 +15,12 @@ public class MainController {
     private MyModel model;
 
 
-    @RequestMapping(value = "/anatolie", method = RequestMethod.GET)
-    public String anatolie(){
+    @RequestMapping(value = "/anatol", method = RequestMethod.GET)
+    public String anatol(){
         model.setName("Hello Anatol!!!");
         model.setAge(30);
 
         return model.toString();
     }
+
 }
